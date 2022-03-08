@@ -1,0 +1,9 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs
+/src/IdentityServer/obj
+/src/IdentityServer/bin
+/src/WasmAppAuth/bin
+/src/WasmAppAuth/obj

@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32126.317
+MinimumVisualStudioVersion = 15.0.26124.0
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{F8826761-C591-4954-AE3F-189B91296285}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IdentityServer", "src\IdentityServer\IdentityServer.csproj", "{38565564-40EF-40AB-BE25-939928DF7765}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WasmAppAuth", "src\WasmAppAuth\WasmAppAuth.csproj", "{6B33CD21-7BC9-4201-82EB-AE7A38A8EB80}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{38565564-40EF-40AB-BE25-939928DF7765}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{38565564-40EF-40AB-BE25-939928DF7765}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38565564-40EF-40AB-BE25-939928DF7765}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38565564-40EF-40AB-BE25-939928DF7765}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6B33CD21-7BC9-4201-82EB-AE7A38A8EB80}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B33CD21-7BC9-4201-82EB-AE7A38A8EB80}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B33CD21-7BC9-4201-82EB-AE7A38A8EB80}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B33CD21-7BC9-4201-82EB-AE7A38A8EB80}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{38565564-40EF-40AB-BE25-939928DF7765} = {F8826761-C591-4954-AE3F-189B91296285}
+		{6B33CD21-7BC9-4201-82EB-AE7A38A8EB80} = {F8826761-C591-4954-AE3F-189B91296285}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {482AA3D6-9466-4CED-8782-1949DD26D103}
+	EndGlobalSection
+EndGlobal

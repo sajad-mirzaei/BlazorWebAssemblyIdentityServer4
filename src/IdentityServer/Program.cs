@@ -2,20 +2,43 @@
 // Licensed under the Apache License, Version 2.0. See LICENSE in the project root for license information.
 
 
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.Hosting;
 using Serilog;
 using Serilog.Events;
 using Serilog.Sinks.SystemConsole.Themes;
-using System;
+using Microsoft.AspNetCore.Builder;
+using IdentityServer;
+using IdentityServerHost.Quickstart.UI;
+using Microsoft.Extensions.DependencyInjection;
 
-namespace IdentityServer
+var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddCors(options =>
 {
-    public class Program
-    {
-        public static int Main(string[] args)
-        {
-            Log.Logger = new LoggerConfiguration()
+    options.AddPolicy("AllowSpecificOrigins",
+        builder => builder.WithOrigins("https://localhost:5015", "http://localhost:5016")
+        .AllowAnyMethod()
+        .AllowAnyHeader());
+});
+
+#region idp-db
+// uncomment, if you want to add an MVC-based UI
+
+builder.Services.AddIdentityServer(options =>
+{
+    // see https://identityserver4.readthedocs.io/en/latest/topics/resources.html
+    options.EmitStaticAudienceClaim = true;
+})
+    .AddInMemoryIdentityResources(Config.IdentityResources)
+    .AddInMemoryApiScopes(Config.ApiScopes)
+    .AddInMemoryClients(Config.Clients)
+    .AddTestUsers(TestUsers.Users)
+    // not recommended for production - you need to store your key material somewhere secure
+    .AddDeveloperSigningCredential();
+#endregion
+
+builder.Services.AddControllersWithViews();
+#region Log
+Log.Logger = new LoggerConfiguration()
                 .MinimumLevel.Debug()
                 .MinimumLevel.Override("Microsoft", LogEventLevel.Warning)
                 .MinimumLevel.Override("Microsoft.Hosting.Lifetime", LogEventLevel.Information)
@@ -31,30 +54,33 @@ namespace IdentityServer
                 //    flushToDiskInterval: TimeSpan.FromSeconds(1))
                 .WriteTo.Console(outputTemplate: "[{Timestamp:HH:mm:ss} {Level}] {SourceContext}{NewLine}{Message:lj}{NewLine}{Exception}{NewLine}", theme: AnsiConsoleTheme.Code)
                 .CreateLogger();
+Log.Information("Starting host...");
+builder.Logging.AddSerilog(Log.Logger);
+#endregion
 
-            try
-            {
-                Log.Information("Starting host...");
-                CreateHostBuilder(args).Build().Run();
-                return 0;
-            }
-            catch (Exception ex)
-            {
-                Log.Fatal(ex, "Host terminated unexpectedly.");
-                return 1;
-            }
-            finally
-            {
-                Log.CloseAndFlush();
-            }
-        }
+var app = builder.Build();
+app.UseCors("AllowSpecificOrigins");
 
-        public static IHostBuilder CreateHostBuilder(string[] args) =>
-            Host.CreateDefaultBuilder(args)
-                .UseSerilog()
-                .ConfigureWebHostDefaults(webBuilder =>
-                {
-                    webBuilder.UseStartup<Startup>();
-                });
-    }
-}
+#region app
+//if (Environment.IsDevelopment())
+//{
+app.UseDeveloperExceptionPage();
+//}
+
+// uncomment if you want to add MVC
+app.UseStaticFiles();
+app.UseRouting();
+
+app.UseIdentityServer();
+
+//app.UseSerilogRequestLogging();
+
+// uncomment, if you want to add MVC
+app.UseAuthorization();
+app.UseEndpoints(endpoints =>
+{
+    endpoints.MapDefaultControllerRoute();
+});
+
+app.Run();
+#endregion

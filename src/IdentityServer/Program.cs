@@ -15,7 +15,12 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowSpecificOrigins",
-        builder => builder.WithOrigins("https://localhost:5015", "http://localhost:5016")
+        builder => builder.WithOrigins(
+            "https://localhost:5015", 
+            "http://localhost:5016", 
+            "https://localhost:44360",
+            "https://localhost:5003"
+            )
         .AllowAnyMethod()
         .AllowAnyHeader());
 });

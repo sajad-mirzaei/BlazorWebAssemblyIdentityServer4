@@ -12,6 +12,17 @@
         Login page
     </form>
 
+
+    
+    <button id="login">Login</button>
+    <button id="api">Call API</button>
+    <button id="logout">Logout</button>
+
+    <pre id="results"></pre>
+
+    <script src="Assets/oidc-client/oidc-client.js"></script>
+    <script src="Assets/oidc-client/app.js"></script>
+
     <script type="text/javascript">
 
     </script>

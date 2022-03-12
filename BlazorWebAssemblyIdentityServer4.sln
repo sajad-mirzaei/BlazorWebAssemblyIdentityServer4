@@ -30,6 +30,8 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "WebFormAppClient", "src\Web
 		SlnRelativePath = "src\WebFormAppClient\"
 	EndProjectSection
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JavaScriptClient", "src\JavaScriptClient\JavaScriptClient.csproj", "{2AD57FD9-DD31-4D7E-AFBA-B6A8A673B554}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -48,6 +50,10 @@ Global
 		{E958FC11-940F-4F64-B57A-77426DB68200}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E958FC11-940F-4F64-B57A-77426DB68200}.Release|Any CPU.ActiveCfg = Debug|Any CPU
 		{E958FC11-940F-4F64-B57A-77426DB68200}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{2AD57FD9-DD31-4D7E-AFBA-B6A8A673B554}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2AD57FD9-DD31-4D7E-AFBA-B6A8A673B554}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2AD57FD9-DD31-4D7E-AFBA-B6A8A673B554}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2AD57FD9-DD31-4D7E-AFBA-B6A8A673B554}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -56,6 +62,7 @@ Global
 		{38565564-40EF-40AB-BE25-939928DF7765} = {F8826761-C591-4954-AE3F-189B91296285}
 		{B856380D-2391-4DC5-9F4C-4A1FFFD5730A} = {F8826761-C591-4954-AE3F-189B91296285}
 		{E958FC11-940F-4F64-B57A-77426DB68200} = {F8826761-C591-4954-AE3F-189B91296285}
+		{2AD57FD9-DD31-4D7E-AFBA-B6A8A673B554} = {F8826761-C591-4954-AE3F-189B91296285}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {482AA3D6-9466-4CED-8782-1949DD26D103}

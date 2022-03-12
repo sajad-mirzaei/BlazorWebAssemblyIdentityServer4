@@ -20,17 +20,15 @@ document.getElementById("logout").addEventListener("click", logout, false);
 
 var config = {
     authority: "https://localhost:5001",
-    client_id: "js",
-    redirect_uri: "https://localhost:44360/LoginCallBack.aspx",
+    client_id: "WebForm",
+    redirect_uri: "https://localhost:44360/Login.aspx?callback=1",
     response_type: "code",
     scope: "openid profile ",
-    post_logout_redirect_uri: "https://localhost:44360/Login.aspx",
+    post_logout_redirect_uri: "https://localhost:44360/login.aspx",
 };
 var mgr = new Oidc.UserManager(config);
 
 mgr.getUser().then(function (user) {
-    console.log(user);
-    console.log("--------------");
     if (user) {
         log("User logged in", user.profile);
     }

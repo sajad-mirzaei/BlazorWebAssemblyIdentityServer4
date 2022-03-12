@@ -48,7 +48,7 @@ namespace IdentityServer
                     AllowedGrantTypes = GrantTypes.Code,
                     RequireClientSecret = false,
 
-                    RedirectUris =           { "https://localhost:44360/LoginCallBack.aspx" },
+                    RedirectUris =           { "https://localhost:44360/Login.aspx?callback=1" },
                     PostLogoutRedirectUris = { "https://localhost:44360/Login.aspx" },
                     AllowedCorsOrigins =     { "https://localhost:44360" },
 

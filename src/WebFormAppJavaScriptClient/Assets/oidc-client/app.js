@@ -20,10 +20,10 @@ document.getElementById("logout").addEventListener("click", logout, false);
 
 var config = {
     authority: "https://localhost:5001",
-    client_id: "WebForm",
+    client_id: "WebFormJavascript",
     redirect_uri: "https://localhost:44360/Login.aspx?callback=1",
     response_type: "code",
-    scope: "openid profile ",
+    scope: "openid profile api1",
     post_logout_redirect_uri: "https://localhost:44360/login.aspx",
 };
 var mgr = new Oidc.UserManager(config);

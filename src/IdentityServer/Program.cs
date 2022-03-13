@@ -19,7 +19,9 @@ builder.Services.AddCors(options =>
             "https://localhost:5015", 
             "http://localhost:5016", 
             "https://localhost:44360",
-            "https://localhost:5003"
+            "https://localhost:5003",
+            "https://localhost:44300",
+            "https://localhost:6001"
             )
         .AllowAnyMethod()
         .AllowAnyHeader());
@@ -35,6 +37,7 @@ builder.Services.AddIdentityServer(options =>
 })
     .AddInMemoryIdentityResources(Config.IdentityResources)
     .AddInMemoryApiScopes(Config.ApiScopes)
+    .AddInMemoryApiResources(Config.ApiResources)
     .AddInMemoryClients(Config.Clients)
     .AddTestUsers(TestUsers.Users)
     // not recommended for production - you need to store your key material somewhere secure

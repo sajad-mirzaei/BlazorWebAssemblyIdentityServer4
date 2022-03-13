@@ -17,13 +17,36 @@ namespace IdentityServer
                 new IdentityResources.Profile(),
             };
 
+        public static IEnumerable<ApiResource> ApiResources =>
+            new ApiResource[]
+            {
+                /*new ApiResource("WebApi1_Resource1", "سرویس هواشناسی")
+                {
+                    Scopes = { "WebApi1_Scope1.read", "WebApi1_Scope1.write", "manage" }
+                }*/
+            };
+
         public static IEnumerable<ApiScope> ApiScopes =>
             new ApiScope[]
-            { };
+            { 
+                new ApiScope("api1", "سرویس هواشناسی")
+            };
 
         public static IEnumerable<Client> Clients =>
             new Client[]
             {
+                /*// machine to machine client
+                new Client
+                {
+                    ClientId = "client",
+                    ClientSecrets = { new Secret("secret".Sha256()) },
+
+                    AllowedGrantTypes = GrantTypes.ClientCredentials,
+                    // scopes that client has access to
+                    AllowedScopes = { "WebApi1_Scope1.read" }
+                },*/
+                
+                // Blazor WebAssembly Client
                 new Client
                 {
                     ClientId = "wasmappauth-client",
@@ -37,13 +60,13 @@ namespace IdentityServer
                     RedirectUris = { "https://localhost:5015/authentication/login-callback" },
                     PostLogoutRedirectUris = { "https://localhost:5015/authentication/logout-callback" },
 
-                    AllowedScopes = {"openid", "profile"},
+                    AllowedScopes = {"openid", "profile", "api1"},
                 },
 
                 // WebForm Client
                 new Client
                 {
-                    ClientId = "WebForm",
+                    ClientId = "WebFormJavascript",
                     ClientName = "WebForm Client",
                     AllowedGrantTypes = GrantTypes.Code,
                     RequireClientSecret = false,
@@ -52,10 +75,7 @@ namespace IdentityServer
                     PostLogoutRedirectUris = { "https://localhost:44360/Login.aspx" },
                     AllowedCorsOrigins =     { "https://localhost:44360" },
 
-                    AllowedScopes =
-                    {
-                        "openid", "profile"
-                    }
+                    AllowedScopes = { "openid", "profile", "api1" }
                 },
 
                 // JavaScript Client
@@ -70,10 +90,7 @@ namespace IdentityServer
                     PostLogoutRedirectUris = { "https://localhost:5003/index.html" },
                     AllowedCorsOrigins =     { "https://localhost:5003" },
 
-                    AllowedScopes =
-                    {
-                        "openid", "profile"
-                    }
+                    AllowedScopes = { "openid", "profile", "api1" }
                 }
             };
     }

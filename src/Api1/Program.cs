@@ -46,6 +46,7 @@ builder.Services.AddCors(options =>
         policy.WithOrigins(
             "https://localhost:5003",//JavascriptClient
             "https://localhost:44360",//WebFormJavascriptClient
+            "https://localhost:44350",//WebFormJavascriptClient2
             "https://localhost:5015"//WasmClient
             )
             .AllowAnyHeader()

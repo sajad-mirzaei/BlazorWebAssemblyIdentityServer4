@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\.NET\\Test\\identityserver\\0-ok-versions\\3-ok\\dev_3_JavaScript\\src\\JavaScriptClient\\JavaScriptClient.csproj": {}
+    "D:\\.NET\\Test\\identityserver\\BlazorWebAssemblyIdentityServer4\\src\\JavaScriptClient\\JavaScriptClient.csproj": {}
   },
   "projects": {
-    "D:\\.NET\\Test\\identityserver\\0-ok-versions\\3-ok\\dev_3_JavaScript\\src\\JavaScriptClient\\JavaScriptClient.csproj": {
+    "D:\\.NET\\Test\\identityserver\\BlazorWebAssemblyIdentityServer4\\src\\JavaScriptClient\\JavaScriptClient.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\.NET\\Test\\identityserver\\0-ok-versions\\3-ok\\dev_3_JavaScript\\src\\JavaScriptClient\\JavaScriptClient.csproj",
+        "projectUniqueName": "D:\\.NET\\Test\\identityserver\\BlazorWebAssemblyIdentityServer4\\src\\JavaScriptClient\\JavaScriptClient.csproj",
         "projectName": "JavaScriptClient",
-        "projectPath": "D:\\.NET\\Test\\identityserver\\0-ok-versions\\3-ok\\dev_3_JavaScript\\src\\JavaScriptClient\\JavaScriptClient.csproj",
+        "projectPath": "D:\\.NET\\Test\\identityserver\\BlazorWebAssemblyIdentityServer4\\src\\JavaScriptClient\\JavaScriptClient.csproj",
         "packagesPath": "C:\\Users\\60113\\.nuget\\packages\\",
-        "outputPath": "D:\\.NET\\Test\\identityserver\\0-ok-versions\\3-ok\\dev_3_JavaScript\\src\\JavaScriptClient\\obj\\",
+        "outputPath": "D:\\.NET\\Test\\identityserver\\BlazorWebAssemblyIdentityServer4\\src\\JavaScriptClient\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
@@ -63,7 +63,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     }

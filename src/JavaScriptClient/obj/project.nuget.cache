@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "LHDxYjmsJGeuZi9b5muDGYYz/epJUgLd13OeX3bK0JpOFfOxwBG1b1oFApo/9nklGmgjhWo1O+THkBF+deH93Q==",
+  "dgSpecHash": "K/6m/VVMAyZiiXO4C4O63VA2vjTNid3WJ1hWT0EVD7I3D3VWhd+mZm+Qg9znpEtYc2Q1xzhCAqFWIGjXxM3k1w==",
   "success": true,
-  "projectFilePath": "D:\\.NET\\Test\\identityserver\\0-ok-versions\\3-ok\\dev_3_JavaScript\\src\\JavaScriptClient\\JavaScriptClient.csproj",
+  "projectFilePath": "D:\\.NET\\Test\\identityserver\\BlazorWebAssemblyIdentityServer4\\src\\JavaScriptClient\\NetCoreJavaScriptClient.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

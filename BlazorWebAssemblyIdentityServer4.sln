@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IdentityServer", "src\Ident
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WasmAppAuth", "src\WasmAppAuth\WasmAppAuth.csproj", "{B856380D-2391-4DC5-9F4C-4A1FFFD5730A}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JavaScriptClient", "src\JavaScriptClient\JavaScriptClient.csproj", "{2AD57FD9-DD31-4D7E-AFBA-B6A8A673B554}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetCoreJavaScriptClient", "src\JavaScriptClient\NetCoreJavaScriptClient.csproj", "{2AD57FD9-DD31-4D7E-AFBA-B6A8A673B554}"
 EndProject
 Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "WebFormAppJavaScriptClient", "src\WebFormAppJavaScriptClient\", "{CFA43743-A7A9-4A36-9216-85050823BEC1}"
 	ProjectSection(WebsiteProperties) = preProject
@@ -53,7 +53,7 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "WebFormAppCSharpClient", "s
 		SlnRelativePath = "src\WebFormAppCSharpClient\"
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Api1", "src\Api1\Api1.csproj", "{58CBE919-CAD3-4924-AA95-F01EB5FA8120}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Api1", "src\Api1\Api1.csproj", "{58CBE919-CAD3-4924-AA95-F01EB5FA8120}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

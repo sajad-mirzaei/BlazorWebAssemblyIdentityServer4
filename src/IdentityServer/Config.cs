@@ -35,17 +35,6 @@ namespace IdentityServer
         public static IEnumerable<Client> Clients =>
             new Client[]
             {
-                /*// machine to machine client
-                new Client
-                {
-                    ClientId = "client",
-                    ClientSecrets = { new Secret("secret".Sha256()) },
-
-                    AllowedGrantTypes = GrantTypes.ClientCredentials,
-                    // scopes that client has access to
-                    AllowedScopes = { "WebApi1_Scope1.read" }
-                },*/
-                
                 // Blazor WebAssembly Client
                 new Client
                 {
@@ -63,10 +52,10 @@ namespace IdentityServer
                     AllowedScopes = {"openid", "profile", "api1"},
                 },
 
-                // WebForm Client
+                // WebForm JavaScript Client
                 new Client
                 {
-                    ClientId = "WebFormJavascript",
+                    ClientId = "WebFormAppJavaScriptClient",
                     ClientName = "WebForm Client",
                     AllowedGrantTypes = GrantTypes.Code,
                     RequireClientSecret = false,
@@ -78,10 +67,20 @@ namespace IdentityServer
                     AllowedScopes = { "openid", "profile", "api1" }
                 },
 
-                // JavaScript Client
+                // WebForm CSharp Client
                 new Client
                 {
-                    ClientId = "js",
+                    ClientId = "WebFormAppCSharpClient",
+                    ClientName = "WebForm Client",
+                    ClientSecrets = new List<Secret>{ new Secret("123456".Sha256()) },
+                    AllowedGrantTypes = GrantTypes.ClientCredentials,
+                    AllowedScopes = { "openid", "profile", "api1" }
+                },
+
+                // .NetCore JavaScript Client
+                new Client
+                {
+                    ClientId = "NetCoreJavaScriptClient",
                     ClientName = "JavaScript Client",
                     AllowedGrantTypes = GrantTypes.Code,
                     RequireClientSecret = false,

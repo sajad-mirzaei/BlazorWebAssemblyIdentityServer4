@@ -1,4 +1,4 @@
-/// <reference path="oidc-client.js" />
+//<reference path="oidc-client.js" />
 
 function log() {
     document.getElementById('results').innerText = '';
@@ -20,7 +20,7 @@ document.getElementById("logout").addEventListener("click", logout, false);
 
 var config = {
     authority: "https://localhost:5001",
-    client_id: "js",
+    client_id: "NetCoreJavaScriptClient",
     redirect_uri: "https://localhost:5003/callback.html",
     response_type: "code",
     scope: "openid profile api1",

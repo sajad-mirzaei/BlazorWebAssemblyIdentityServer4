@@ -7,3 +7,6 @@
 /src/IdentityServer/bin
 /src/WasmAppAuth/bin
 /src/WasmAppAuth/obj
+/src/Api/bin/Debug/netcoreapp3.1
+/src/Api1/bin/Debug/net6.0
+/src/Api1/obj

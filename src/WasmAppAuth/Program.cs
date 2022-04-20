@@ -3,7 +3,9 @@ using Microsoft.AspNetCore.Components.WebAssembly.Authentication;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using Microsoft.Extensions.DependencyInjection;
 using System;
+using System.Net;
 using System.Net.Http;
+using System.Net.Security;
 using WasmAppAuth;
 
 var builder = WebAssemblyHostBuilder.CreateDefault(args);
@@ -11,6 +13,10 @@ builder.RootComponents.Add<App>("#app");
 
 builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
 
+ServicePointManager.ServerCertificateValidationCallback += (sender, certificate, chain, errors) =>
+{
+    return errors == SslPolicyErrors.None;
+};
 
 builder.Services.AddHttpClient("api")
                 .AddHttpMessageHandler(sp =>

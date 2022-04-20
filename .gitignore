@@ -5,6 +5,8 @@
 /.vs
 /src/IdentityServer/obj
 /src/IdentityServer/bin
+/src/JavaScriptClient/bin
+/src/JavaScriptClient/obj
 /src/WasmAppAuth/bin
 /src/WasmAppAuth/obj
 /src/Api/bin/Debug/netcoreapp3.1

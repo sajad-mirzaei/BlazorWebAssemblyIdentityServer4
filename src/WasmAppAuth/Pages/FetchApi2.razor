@@ -1,9 +1,9 @@
-﻿@page "/fetchapi1"
+﻿@page "/fetchapi2"
 @inject HttpClient Http
 @using Microsoft.AspNetCore.Authorization;
 @attribute [Authorize]
 
-<h1>Api 1 Weather forecast</h1>
+<h1>Api 2 Weather forecast</h1>
 
 <p>This component demonstrates fetching data from the server.</p>
 
@@ -41,7 +41,7 @@ else
 
     protected override async Task OnInitializedAsync()
     {
-        forecasts = await Http.GetFromJsonAsync<WeatherForecast[]>("https://localhost:6001/WeatherForecast");
+        forecasts = await Http.GetFromJsonAsync<WeatherForecast[]>("https://localhost:6003/WeatherForecast");
     }
 
     public class WeatherForecast

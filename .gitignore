@@ -9,6 +9,7 @@
 /src/JavaScriptClient/obj
 /src/WasmAppAuth/bin
 /src/WasmAppAuth/obj
-/src/Api/bin/Debug/netcoreapp3.1
-/src/Api1/bin/Debug/net6.0
+/src/Api1/bin
 /src/Api1/obj
+/src/Api2/bin
+/src/Api2/obj

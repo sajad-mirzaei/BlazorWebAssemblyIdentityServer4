@@ -18,18 +18,18 @@ ServicePointManager.ServerCertificateValidationCallback += (sender, certificate,
     return errors == SslPolicyErrors.None;
 };
 
-builder.Services.AddHttpClient("api")
+builder.Services.AddHttpClient("apies")
                 .AddHttpMessageHandler(sp =>
                 {
                     var handler = sp.GetService<AuthorizationMessageHandler>()
                         .ConfigureHandler(
-                            authorizedUrls: new[] { "https://localhost:6001/identity" },
-                            scopes: new[] { "openid", "profile", "api1" });
+                            authorizedUrls: new[] { "https://localhost:6001", "https://localhost:6003" },
+                            scopes: new[] { "openid", "profile", "api1", "api2" });
 
                     return handler;
                 });
 
-builder.Services.AddScoped(sp => sp.GetService<IHttpClientFactory>().CreateClient("api"));
+builder.Services.AddScoped(sp => sp.GetService<IHttpClientFactory>().CreateClient("apies"));
 
 builder.Services.AddOidcAuthentication(options =>
 {

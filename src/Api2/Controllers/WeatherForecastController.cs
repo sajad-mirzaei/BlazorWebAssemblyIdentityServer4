@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Api1.Controllers
+namespace Api2.Controllers
 {
     [ApiController]
     [Route("[controller]")]
@@ -27,7 +27,7 @@ namespace Api1.Controllers
             {
                 Date = DateTime.Now.AddDays(index),
                 TemperatureC = Random.Shared.Next(-20, 55),
-                Summary = "Api 1 Data" + Summaries[Random.Shared.Next(Summaries.Length)]
+                Summary = "Api 2 Data" + Summaries[Random.Shared.Next(Summaries.Length)]
             })
             .ToArray();
         }

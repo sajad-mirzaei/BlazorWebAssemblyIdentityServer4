@@ -29,7 +29,8 @@ namespace IdentityServer
         public static IEnumerable<ApiScope> ApiScopes =>
             new ApiScope[]
             { 
-                new ApiScope("api1", "سرویس هواشناسی")
+                new ApiScope("api1", "سرویس هواشناسی 1"),
+                new ApiScope("api2", "سرویس هواشناسی 2"),
             };
 
         public static IEnumerable<Client> Clients =>
@@ -49,7 +50,7 @@ namespace IdentityServer
                     RedirectUris = { "https://localhost:5015/authentication/login-callback" },
                     PostLogoutRedirectUris = { "https://localhost:5015/authentication/logout-callback" },
 
-                    AllowedScopes = {"openid", "profile", "api1"},
+                    AllowedScopes = {"openid", "profile", "api1", "api2" },
                 },
 
                 // WebForm JavaScript Client
@@ -64,7 +65,7 @@ namespace IdentityServer
                     PostLogoutRedirectUris = { "https://localhost:44360/Login.aspx" },
                     AllowedCorsOrigins =     { "https://localhost:44360" },
 
-                    AllowedScopes = { "openid", "profile", "api1" }
+                    AllowedScopes = { "openid", "profile", "api1", "api2" }
                 },
 
                 // WebForm CSharp Client
@@ -74,7 +75,7 @@ namespace IdentityServer
                     ClientName = "WebForm Client",
                     ClientSecrets = new List<Secret>{ new Secret("123456".Sha256()) },
                     AllowedGrantTypes = GrantTypes.ClientCredentials,
-                    AllowedScopes = { "openid", "profile", "api1" }
+                    AllowedScopes = { "openid", "profile", "api1", "api2" }
                 },
 
                 // .NetCore JavaScript Client
@@ -89,7 +90,7 @@ namespace IdentityServer
                     PostLogoutRedirectUris = { "https://localhost:5003/index.html" },
                     AllowedCorsOrigins =     { "https://localhost:5003" },
 
-                    AllowedScopes = { "openid", "profile", "api1" }
+                    AllowedScopes = { "openid", "profile", "api1", "api2" }
                 }
             };
     }

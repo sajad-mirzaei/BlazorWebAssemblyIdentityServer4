@@ -7,9 +7,13 @@
 /src/IdentityServer/bin
 /src/JavaScriptClient/bin
 /src/JavaScriptClient/obj
-/src/WasmAppAuth/bin
-/src/WasmAppAuth/obj
+/src/WebAssemblyClient1/bin
+/src/WebAssemblyClient1/obj
+/src/WebAssemblyClient2/bin
+/src/WebAssemblyClient2/obj
 /src/Api1/bin
 /src/Api1/obj
 /src/Api2/bin
 /src/Api2/obj
+/src/Api3/bin
+/src/Api3/obj

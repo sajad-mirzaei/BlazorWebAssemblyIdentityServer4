@@ -25,6 +25,8 @@ builder.Services.AddCors(options =>
             "https://localhost:5003",
             "https://localhost:44300",
             "https://localhost:6001",
+            "https://localhost:6003",
+            "https://localhost:6005",
             "https://localhost:5001"
             )
         .AllowAnyMethod()
@@ -61,7 +63,7 @@ builder.Services.AddAuthorization(options =>
     options.AddPolicy("ApiScope", policy =>
     {
         policy.RequireAuthenticatedUser();
-        policy.RequireClaim("scope", "api1");
+        policy.RequireClaim("scope", "api3");
     });
 });
 #endregion

@@ -18,6 +18,8 @@ builder.Services.AddCors(options =>
         builder => builder.WithOrigins(
             "https://localhost:5015", 
             "http://localhost:5016", 
+            "https://localhost:5017", 
+            "http://localhost:5018", 
             "https://localhost:44360",
             "https://localhost:44350",
             "https://localhost:5003",

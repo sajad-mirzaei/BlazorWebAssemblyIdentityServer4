@@ -31,16 +31,17 @@ namespace IdentityServer
             { 
                 new ApiScope("api1", "سرویس هواشناسی 1"),
                 new ApiScope("api2", "سرویس هواشناسی 2"),
+                new ApiScope("api3", "سرویس کمک هواشناسی 3")
             };
 
         public static IEnumerable<Client> Clients =>
             new Client[]
             {
-                // Blazor WebAssembly Client
+                // Blazor WebAssembly Client 1
                 new Client
                 {
-                    ClientId = "wasmappauth-client",
-                    ClientName = "Blazor Webassembly App Client",
+                    ClientId = "WebAssemblyClient1",
+                    ClientName = "Blazor Webassembly App Client 1",
                     RequireClientSecret = false,
 
                     AllowedGrantTypes = GrantTypes.Code,
@@ -49,6 +50,23 @@ namespace IdentityServer
                     AllowedCorsOrigins = { "https://localhost:5015" },
                     RedirectUris = { "https://localhost:5015/authentication/login-callback" },
                     PostLogoutRedirectUris = { "https://localhost:5015/authentication/logout-callback" },
+
+                    AllowedScopes = {"openid", "profile", "api1", "api2" },
+                },
+
+                // Blazor WebAssembly Client 2
+                new Client
+                {
+                    ClientId = "WebAssemblyClient2",
+                    ClientName = "Blazor Webassembly App Client 2",
+                    RequireClientSecret = false,
+
+                    AllowedGrantTypes = GrantTypes.Code,
+                    RequirePkce = true,
+
+                    AllowedCorsOrigins = { "https://localhost:5017" },
+                    RedirectUris = { "https://localhost:5017/authentication/login-callback" },
+                    PostLogoutRedirectUris = { "https://localhost:5017/authentication/logout-callback" },
 
                     AllowedScopes = {"openid", "profile", "api1", "api2" },
                 },
@@ -91,6 +109,24 @@ namespace IdentityServer
                     AllowedCorsOrigins =     { "https://localhost:5003" },
 
                     AllowedScopes = { "openid", "profile", "api1", "api2" }
+                },
+                
+                // Api2 Client connect to Api3
+                new Client
+                {
+                    ClientId = "api2.client",
+
+                    // no interactive user, use the clientid/secret for authentication
+                    AllowedGrantTypes = GrantTypes.ClientCredentials,
+
+                    // secret for authentication
+                    ClientSecrets =
+                    {
+                        new Secret("secret".Sha256())
+                    },
+
+                    // scopes that client has access to
+                    AllowedScopes = { "api3" }
                 }
             };
     }

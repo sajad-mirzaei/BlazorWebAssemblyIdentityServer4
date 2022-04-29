@@ -10,6 +10,7 @@ using WebAssemblyClient2;
 
 var builder = WebAssemblyHostBuilder.CreateDefault(args);
 builder.RootComponents.Add<App>("#app");
+builder.RootComponents.Add<HeadOutlet>("head::after");
 
 builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
 
@@ -18,18 +19,26 @@ ServicePointManager.ServerCertificateValidationCallback += (sender, certificate,
     return errors == SslPolicyErrors.None;
 };
 
-builder.Services.AddHttpClient("APIs")
+builder.Services.AddHttpClient("API1")
                 .AddHttpMessageHandler(sp =>
                 {
                     var handler = sp.GetService<AuthorizationMessageHandler>()
                         .ConfigureHandler(
-                            authorizedUrls: new[] { "https://localhost:6001", "https://localhost:6003" },
+                            authorizedUrls: new[] { "https://localhost:6001" },
                             scopes: new[] { "openid", "profile", "api1", "api2" });
 
                     return handler;
                 });
+builder.Services.AddHttpClient("API2")
+                .AddHttpMessageHandler(sp =>
+                {
+                    var handler = sp.GetService<AuthorizationMessageHandler>()
+                        .ConfigureHandler(
+                            authorizedUrls: new[] { "https://localhost:6003" },
+                            scopes: new[] { "openid", "profile", "api1", "api2" });
 
-builder.Services.AddScoped(sp => sp.GetService<IHttpClientFactory>().CreateClient("APIs"));
+                    return handler;
+                });
 
 builder.Services.AddOidcAuthentication(options =>
 {

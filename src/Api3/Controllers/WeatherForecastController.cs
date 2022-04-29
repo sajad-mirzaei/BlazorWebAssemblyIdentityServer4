@@ -1,11 +1,9 @@
-using IdentityModel.Client;
-using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Newtonsoft.Json.Linq;
 
-namespace Api2.Controllers
+namespace Api3.Controllers
 {
+
     [ApiController]
     [Route("[controller]")]
     [Authorize]
@@ -30,7 +28,7 @@ namespace Api2.Controllers
             {
                 Date = DateTime.Now.AddDays(index),
                 TemperatureC = Random.Shared.Next(-20, 55),
-                Summary = "Api 2 Data" + Summaries[Random.Shared.Next(Summaries.Length)]
+                Summary = "Api 3 Data" + Summaries[Random.Shared.Next(Summaries.Length)]
             })
             .ToArray();
         }

@@ -16,18 +16,18 @@ builder.Services.AddCors(options =>
 {
     options.AddPolicy(MyAllowSpecificOrigins,
         builder => builder.WithOrigins(
-            "https://localhost:5015",
-            "http://localhost:5016",
-            "https://localhost:5017",
-            "http://localhost:5018",
-            "https://localhost:44360",
-            "https://localhost:44350",
-            "https://localhost:5003",
-            "https://localhost:44300",
-            "https://localhost:6001",
-            "https://localhost:6003",
-            "https://localhost:6005",
-            "https://localhost:5001"
+                "https://localhost:5015", //WebAssemblyClient1
+                "http://localhost:5016", //WebAssemblyClient1
+                "https://localhost:5017", //WebAssemblyClient2
+                "http://localhost:5018", //WebAssemblyClient2
+                "https://localhost:44360", //WebFormAppJavaScriptClient
+                "https://localhost:44350", //WebForm CSharp Client 
+                "https://localhost:5003", //NetCoreJavaScriptClient
+                "https://localhost:44300", //
+                "https://localhost:6001", //Api1
+                "https://localhost:6003", //Api2
+                "https://localhost:6005", //Api3
+                "https://localhost:5001" //idp
             )
         .AllowAnyMethod()
         .AllowAnyHeader());
@@ -46,7 +46,7 @@ builder.Services.AddControllers();
 builder.Services.AddAuthentication("Bearer")
     .AddJwtBearer("Bearer", options =>
     {
-        options.Authority = "https://localhost:5001";
+        options.Authority = "https://localhost:5001"; //idp
         options.TokenValidationParameters = new TokenValidationParameters
         {
             ValidateAudience = false

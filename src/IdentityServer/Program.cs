@@ -16,15 +16,15 @@ builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowSpecificOrigins",
         builder => builder.WithOrigins(
-            "https://localhost:5015", 
-            "http://localhost:5016", 
-            "https://localhost:5017", 
-            "http://localhost:5018", 
-            "https://localhost:44360",
-            "https://localhost:44350",
-            "https://localhost:5003",
-            "https://localhost:44300",
-            "https://localhost:6001"
+            "https://localhost:5015", //WebAssemblyClient1
+            "http://localhost:5016", //WebAssemblyClient1
+            "https://localhost:5017", //WebAssemblyClient2
+            "http://localhost:5018", //WebAssemblyClient2
+            "https://localhost:44360", //WebFormAppJavaScriptClient
+            "https://localhost:44350", //WebForm CSharp Client 
+            "https://localhost:5003", //NetCoreJavaScriptClient
+            "https://localhost:44300", //
+            "https://localhost:6001" //Api1
             )
         .AllowAnyMethod()
         .AllowAnyHeader());

@@ -19,7 +19,7 @@ document.getElementById("api").addEventListener("click", api, false);
 document.getElementById("logout").addEventListener("click", logout, false);
 
 var config = {
-    authority: "https://localhost:5001", //idp
+    authority: "https://localhost:7000", //idp
     client_id: "WebFormAppJavaScriptClient",
     redirect_uri: "https://localhost:44360/Login.aspx?callback=1", //self
     response_type: "code",
@@ -43,7 +43,7 @@ function login() {
 
 function api() {
     mgr.getUser().then(function (user) {
-        var url = "https://localhost:6001/identity";//Api1
+        var url = "https://localhost:7011/identity";//Api1
 
         var xhr = new XMLHttpRequest();
         xhr.open("GET", url);

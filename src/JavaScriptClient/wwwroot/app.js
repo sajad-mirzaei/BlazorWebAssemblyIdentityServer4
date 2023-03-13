@@ -19,12 +19,12 @@ document.getElementById("api").addEventListener("click", api, false);
 document.getElementById("logout").addEventListener("click", logout, false);
 
 var config = {
-    authority: "https://localhost:5001", //idp
+    authority: "https://localhost:7000", //idp
     client_id: "NetCoreJavaScriptClient",
-    redirect_uri: "https://localhost:5003/callback.html", //self-NetCoreJavaScriptClient
+    redirect_uri: "https://localhost:7023/callback.html", //self-NetCoreJavaScriptClient
     response_type: "code",
     scope: "openid profile api1",
-    post_logout_redirect_uri: "https://localhost:5003/index.html", //self-NetCoreJavaScriptClient
+    post_logout_redirect_uri: "https://localhost:7023/index.html", //self-NetCoreJavaScriptClient
 };
 var mgr = new Oidc.UserManager(config);
 
@@ -43,7 +43,7 @@ function login() {
 
 function api() {
     mgr.getUser().then(function (user) {
-        var url = "https://localhost:6001/identity";//Api1
+        var url = "https://localhost:7011/identity";//Api1
 
         var xhr = new XMLHttpRequest();
         xhr.open("GET", url);

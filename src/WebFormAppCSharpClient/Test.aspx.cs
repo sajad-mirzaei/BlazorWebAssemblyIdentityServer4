@@ -7,7 +7,7 @@ partial class Test : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        var client = new RestClient("https://localhost:5001/connect/token")
+        var client = new RestClient("https://localhost:7000/connect/token")
         {
             Timeout = -1
         };
@@ -20,7 +20,7 @@ partial class Test : System.Web.UI.Page
         var x = JsonConvert.DeserializeObject<Dictionary<string, string>>(response.Content);
         if (x != null && x["access_token"] != null)
         {
-            var client2 = new RestClient("https://localhost:6001/identity")
+            var client2 = new RestClient("https://localhost:7011/identity")
             {
                 Timeout = -1
             };

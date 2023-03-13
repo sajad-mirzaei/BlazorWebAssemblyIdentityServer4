@@ -47,9 +47,9 @@ namespace IdentityServer
                     AllowedGrantTypes = GrantTypes.Code,
                     RequirePkce = true,
 
-                    AllowedCorsOrigins = { "https://localhost:5015" },
-                    RedirectUris = { "https://localhost:5015/authentication/login-callback" },
-                    PostLogoutRedirectUris = { "https://localhost:5015/authentication/logout-callback" },
+                    AllowedCorsOrigins = { "https://localhost:7021" },
+                    RedirectUris = { "https://localhost:7021/authentication/login-callback" },
+                    PostLogoutRedirectUris = { "https://localhost:7021/authentication/logout-callback" },
 
                     AllowedScopes = {"openid", "profile", "api1", "api2" },
                 },
@@ -64,9 +64,9 @@ namespace IdentityServer
                     AllowedGrantTypes = GrantTypes.Code,
                     RequirePkce = true,
 
-                    AllowedCorsOrigins = { "https://localhost:5017" },
-                    RedirectUris = { "https://localhost:5017/authentication/login-callback" },
-                    PostLogoutRedirectUris = { "https://localhost:5017/authentication/logout-callback" },
+                    AllowedCorsOrigins = { "https://localhost:7022" },
+                    RedirectUris = { "https://localhost:7022/authentication/login-callback" },
+                    PostLogoutRedirectUris = { "https://localhost:7022/authentication/logout-callback" },
 
                     AllowedScopes = {"openid", "profile", "api1", "api2" },
                 },
@@ -104,9 +104,9 @@ namespace IdentityServer
                     AllowedGrantTypes = GrantTypes.Code,
                     RequireClientSecret = false,
 
-                    RedirectUris =           { "https://localhost:5003/callback.html" },
-                    PostLogoutRedirectUris = { "https://localhost:5003/index.html" },
-                    AllowedCorsOrigins =     { "https://localhost:5003" },
+                    RedirectUris =           { "https://localhost:7023/callback.html" },
+                    PostLogoutRedirectUris = { "https://localhost:7023/index.html" },
+                    AllowedCorsOrigins =     { "https://localhost:7023" },
 
                     AllowedScopes = { "openid", "profile", "api1", "api2" }
                 },

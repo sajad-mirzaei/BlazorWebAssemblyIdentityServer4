@@ -43,7 +43,7 @@ else
     protected override async Task OnInitializedAsync()
     {
         var Http = factory.CreateClient("API2");
-        forecasts = await Http.GetFromJsonAsync<WeatherForecast[]>("https://localhost:6003/WeatherForecastFromApi3"); //Api2
+        forecasts = await Http.GetFromJsonAsync<WeatherForecast[]>("https://localhost:7012/WeatherForecastFromApi3"); //Api2
     }
 
     public class WeatherForecast

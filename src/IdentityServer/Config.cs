@@ -60,9 +60,9 @@ namespace IdentityServer
                     AllowedGrantTypes = GrantTypes.Code,
                     RequirePkce = true,
 
-                    AllowedCorsOrigins = { "https://localhost:7021" },
-                    RedirectUris = { "https://localhost:7021/authentication/login-callback" },
-                    PostLogoutRedirectUris = { "https://localhost:7021/authentication/logout-callback" },
+                    AllowedCorsOrigins = { Origins["WebAssemblyClient1"] },
+                    RedirectUris = { Origins["WebAssemblyClient1"] + "/authentication/login-callback" },
+                    PostLogoutRedirectUris = { Origins["WebAssemblyClient1"] + "/authentication/logout-callback" },
 
                     AllowedScopes = {"openid", "profile", "api1", "api2" },
                 },
@@ -77,9 +77,9 @@ namespace IdentityServer
                     AllowedGrantTypes = GrantTypes.Code,
                     RequirePkce = true,
 
-                    AllowedCorsOrigins = { "https://localhost:7022" },
-                    RedirectUris = { "https://localhost:7022/authentication/login-callback" },
-                    PostLogoutRedirectUris = { "https://localhost:7022/authentication/logout-callback" },
+                    AllowedCorsOrigins = { Origins["WebAssemblyClient2"] },
+                    RedirectUris = { Origins["WebAssemblyClient2"] + "/authentication/login-callback" },
+                    PostLogoutRedirectUris = { Origins["WebAssemblyClient2"] + "/authentication/logout-callback" },
 
                     AllowedScopes = {"openid", "profile", "api1", "api2" },
                 },
@@ -92,9 +92,9 @@ namespace IdentityServer
                     AllowedGrantTypes = GrantTypes.Code,
                     RequireClientSecret = false,
 
-                    RedirectUris =           { "https://localhost:44360/Login.aspx?callback=1" },
-                    PostLogoutRedirectUris = { "https://localhost:44360/Login.aspx" },
-                    AllowedCorsOrigins =     { "https://localhost:44360" },
+                    RedirectUris =           { Origins["WebFormAppJavaScriptClient"] + "/Login.aspx?callback=1" },
+                    PostLogoutRedirectUris = { Origins["WebFormAppJavaScriptClient"] + "/Login.aspx" },
+                    AllowedCorsOrigins =     { Origins["WebFormAppJavaScriptClient"] },
 
                     AllowedScopes = { "openid", "profile", "api1", "api2" }
                 },
@@ -117,9 +117,9 @@ namespace IdentityServer
                     AllowedGrantTypes = GrantTypes.Code,
                     RequireClientSecret = false,
 
-                    RedirectUris =           { "https://localhost:7023/callback.html" },
-                    PostLogoutRedirectUris = { "https://localhost:7023/index.html" },
-                    AllowedCorsOrigins =     { "https://localhost:7023" },
+                    RedirectUris =           { Origins["NetCoreJavaScriptClient"] + "/callback.html" },
+                    PostLogoutRedirectUris = { Origins["NetCoreJavaScriptClient"] + "/index.html" },
+                    AllowedCorsOrigins =     { Origins["NetCoreJavaScriptClient"] },
 
                     AllowedScopes = { "openid", "profile", "api1", "api2" }
                 },

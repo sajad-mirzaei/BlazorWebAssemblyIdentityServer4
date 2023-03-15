@@ -9,23 +9,17 @@ using Microsoft.AspNetCore.Builder;
 using IdentityServer;
 using IdentityServerHost.Quickstart.UI;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Configuration;
+using System.Linq;
+using System.Collections.Generic;
 
 var builder = WebApplication.CreateBuilder(args);
+var serverName = builder.Configuration.GetConnectionString("ServerName");
 
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowSpecificOrigins",
-        builder => builder.WithOrigins(
-            "https://localhost:7000", //Idp
-            "https://localhost:7011", //Api1
-            "https://localhost:7012", //Api2
-            "https://localhost:7013", //Api3
-            "https://localhost:7021", //WebAssemblyClient1
-            "https://localhost:7022", //WebAssemblyClient2
-            "https://localhost:7023", //NetCoreJavaScriptClient
-            "https://localhost:44360",//WebFormAppJavaScriptClient
-            "https://localhost:44350" //WebForm CSharp Client
-            )
+        builder => builder.WithOrigins(Config.Origins.Values.ToArray())
         .AllowAnyMethod()
         .AllowAnyHeader());
 });

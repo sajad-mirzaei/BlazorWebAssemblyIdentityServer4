@@ -10,9 +10,22 @@ namespace IdentityServer
 {
     public static class Config
     {
+        public static Dictionary<string, string> Origins = new()
+        {
+            { "idp", "https://localhost:7000" },
+            { "api1", "https://localhost:7011" },
+            { "api2", "https://localhost:7012" },
+            { "api3", "https://localhost:7013" },
+            { "WebAssemblyClient1", "https://localhost:7021" },
+            { "WebAssemblyClient2", "https://localhost:7022" },
+            { "NetCoreJavaScriptClient", "https://localhost:7023" },
+            { "WebFormAppJavaScriptClient", "https://localhost:44360" },
+            { "WebFormCSharpClient", "https://localhost:44350" }
+        };
+
         public static IEnumerable<IdentityResource> IdentityResources =>
             new IdentityResource[]
-            { 
+            {
                 new IdentityResources.OpenId(),
                 new IdentityResources.Profile(),
             };
@@ -28,7 +41,7 @@ namespace IdentityServer
 
         public static IEnumerable<ApiScope> ApiScopes =>
             new ApiScope[]
-            { 
+            {
                 new ApiScope("api1", "سرویس هواشناسی 1"),
                 new ApiScope("api2", "سرویس هواشناسی 2"),
                 new ApiScope("api3", "سرویس کمک هواشناسی 3")

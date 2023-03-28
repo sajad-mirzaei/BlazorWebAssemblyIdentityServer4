@@ -57,9 +57,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Api2", "src\Api2\Api2.cspro
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Api3", "src\Api3\Api3.csproj", "{C1402916-E3E9-47AC-B5A1-5DBDC9E47897}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAssemblyClient1", "src\WebAssemblyClient1\WebAssemblyClient1.csproj", "{C0BD6267-AA99-4DC3-880B-F561DE35A30A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebAssemblyClient1", "src\WebAssemblyClient1\WebAssemblyClient1.csproj", "{C0BD6267-AA99-4DC3-880B-F561DE35A30A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAssemblyClient2", "src\WebAssemblyClient2\WebAssemblyClient2.csproj", "{CDD2E8E8-E9FE-4179-9882-3E6D9D88C263}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebAssemblyClient2", "src\WebAssemblyClient2\WebAssemblyClient2.csproj", "{CDD2E8E8-E9FE-4179-9882-3E6D9D88C263}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -29,7 +29,7 @@ namespace Api2.Controllers
             // discover endpoints from metadata
             var client = new HttpClient();
 
-            var disco = await client.GetDiscoveryDocumentAsync("https://localhost:7000");
+            var disco = await client.GetDiscoveryDocumentAsync("https://server-devops:7000");
             /*if (disco.IsError)
             {
                 //Console.WriteLine(disco.Error);
@@ -59,7 +59,7 @@ namespace Api2.Controllers
             var apiClient = new HttpClient();
             apiClient.SetBearerToken(tokenResponse.AccessToken);
 
-            var response = await apiClient.GetFromJsonAsync<WeatherForecast[]>("https://localhost:7013/WeatherForecast");
+            var response = await apiClient.GetFromJsonAsync<WeatherForecast[]>("https://server-devops:7013/WeatherForecast");
 
             return response;
         }

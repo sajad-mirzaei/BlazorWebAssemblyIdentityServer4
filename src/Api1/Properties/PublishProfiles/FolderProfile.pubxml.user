@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121.
+-->
+<Project>
+  <PropertyGroup>
+    <_PublishTargetUrl>\\server-devops\IdentityServerTest\api1</_PublishTargetUrl>
+    <History>True|2023-03-28T06:10:51.5769367Z;True|2023-03-28T09:30:22.9709465+03:30;True|2023-03-26T15:05:50.0225508+03:30;True|2023-03-26T15:03:28.8907002+03:30;</History>
+    <LastFailureDetails />
+  </PropertyGroup>
+</Project>

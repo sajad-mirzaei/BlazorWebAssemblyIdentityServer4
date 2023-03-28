@@ -12,15 +12,15 @@ namespace IdentityServer
     {
         public static Dictionary<string, string> Origins = new()
         {
-            { "idp", "https://localhost:7000" },
-            { "api1", "https://localhost:7011" },
-            { "api2", "https://localhost:7012" },
-            { "api3", "https://localhost:7013" },
-            { "WebAssemblyClient1", "https://localhost:7021" },
-            { "WebAssemblyClient2", "https://localhost:7022" },
-            { "NetCoreJavaScriptClient", "https://localhost:7023" },
-            { "WebFormAppJavaScriptClient", "https://localhost:44360" },
-            { "WebFormCSharpClient", "https://localhost:44350" }
+            { "idp", "https://server-devops:7000" },
+            { "api1", "https://server-devops:7011" },
+            { "api2", "https://server-devops:7012" },
+            { "api3", "https://server-devops:7013" },
+            { "WebAssemblyClient1", "https://server-devops:7021" },
+            { "WebAssemblyClient2", "https://server-devops:7022" },
+            { "NetCoreJavaScriptClient", "https://server-devops:7023" },
+            { "WebFormAppJavaScriptClient", "https://server-devops:44360" },
+            { "WebFormCSharpClient", "https://server-devops:44350" }
         };
 
         public static IEnumerable<IdentityResource> IdentityResources =>

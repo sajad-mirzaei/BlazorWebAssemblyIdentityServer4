@@ -24,7 +24,10 @@ builder.Services.AddHttpClient("APIs")
                 {
                     var handler = sp.GetService<AuthorizationMessageHandler>()
                         .ConfigureHandler(
-                            authorizedUrls: new[] { "https://server-devops:7011", "https://server-devops:7012" },
+                            authorizedUrls: new[] { 
+                                "https://server-devops:7000/Api1", 
+                                "https://server-devops:7000/Api2" 
+                            },
                             scopes: new[] { "openid", "profile", "api1", "api2" });
 
                     return handler;
@@ -36,7 +39,7 @@ builder.Services.AddOidcAuthentication(options =>
 {
     // Configure your authentication provider options here.
     // For more information, see https://aka.ms/blazor-standalone-auth
-    options.ProviderOptions.Authority = "https://server-devops:7000";
+    options.ProviderOptions.Authority = "https://server-devops:7000/Idp";
     options.ProviderOptions.ClientId = "WebAssemblyClient1";
     options.ProviderOptions.ResponseType = "code";
 });

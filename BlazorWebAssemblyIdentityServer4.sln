@@ -7,50 +7,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{F8826761-C59
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IdentityServer", "src\IdentityServer\IdentityServer.csproj", "{38565564-40EF-40AB-BE25-939928DF7765}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetCoreJavaScriptClient", "src\JavaScriptClient\NetCoreJavaScriptClient.csproj", "{2AD57FD9-DD31-4D7E-AFBA-B6A8A673B554}"
-EndProject
-Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "WebFormAppJavaScriptClient", "src\WebFormAppJavaScriptClient\", "{CFA43743-A7A9-4A36-9216-85050823BEC1}"
-	ProjectSection(WebsiteProperties) = preProject
-		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5.2"
-		Debug.AspNetCompiler.VirtualPath = "/localhost_44361"
-		Debug.AspNetCompiler.PhysicalPath = "src\WebFormAppJavaScriptClient\"
-		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_44361\"
-		Debug.AspNetCompiler.Updateable = "true"
-		Debug.AspNetCompiler.ForceOverwrite = "true"
-		Debug.AspNetCompiler.FixedNames = "false"
-		Debug.AspNetCompiler.Debug = "True"
-		Release.AspNetCompiler.VirtualPath = "/localhost_44361"
-		Release.AspNetCompiler.PhysicalPath = "src\WebFormAppJavaScriptClient\"
-		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_44361\"
-		Release.AspNetCompiler.Updateable = "true"
-		Release.AspNetCompiler.ForceOverwrite = "true"
-		Release.AspNetCompiler.FixedNames = "false"
-		Release.AspNetCompiler.Debug = "False"
-		VWDPort = "44361"
-		SlnRelativePath = "src\WebFormAppJavaScriptClient\"
-	EndProjectSection
-EndProject
-Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "WebFormAppCSharpClient", "src\WebFormAppCSharpClient\", "{BE327B9E-09D3-49A9-ACC5-6DA6D6463F11}"
-	ProjectSection(WebsiteProperties) = preProject
-		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5.2"
-		Debug.AspNetCompiler.VirtualPath = "/localhost_44351"
-		Debug.AspNetCompiler.PhysicalPath = "src\WebFormAppCSharpClient\"
-		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_44351\"
-		Debug.AspNetCompiler.Updateable = "true"
-		Debug.AspNetCompiler.ForceOverwrite = "true"
-		Debug.AspNetCompiler.FixedNames = "false"
-		Debug.AspNetCompiler.Debug = "True"
-		Release.AspNetCompiler.VirtualPath = "/localhost_44351"
-		Release.AspNetCompiler.PhysicalPath = "src\WebFormAppCSharpClient\"
-		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_44351\"
-		Release.AspNetCompiler.Updateable = "true"
-		Release.AspNetCompiler.ForceOverwrite = "true"
-		Release.AspNetCompiler.FixedNames = "false"
-		Release.AspNetCompiler.Debug = "False"
-		VWDPort = "44351"
-		SlnRelativePath = "src\WebFormAppCSharpClient\"
-	EndProjectSection
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Api1", "src\Api1\Api1.csproj", "{58CBE919-CAD3-4924-AA95-F01EB5FA8120}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Api2", "src\Api2\Api2.csproj", "{DBDAAECF-D9C7-424D-BE9D-FADA6F0459C9}"
@@ -58,8 +14,6 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Api3", "src\Api3\Api3.csproj", "{C1402916-E3E9-47AC-B5A1-5DBDC9E47897}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebAssemblyClient1", "src\WebAssemblyClient1\WebAssemblyClient1.csproj", "{C0BD6267-AA99-4DC3-880B-F561DE35A30A}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebAssemblyClient2", "src\WebAssemblyClient2\WebAssemblyClient2.csproj", "{CDD2E8E8-E9FE-4179-9882-3E6D9D88C263}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -71,18 +25,6 @@ Global
 		{38565564-40EF-40AB-BE25-939928DF7765}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{38565564-40EF-40AB-BE25-939928DF7765}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{38565564-40EF-40AB-BE25-939928DF7765}.Release|Any CPU.Build.0 = Release|Any CPU
-		{2AD57FD9-DD31-4D7E-AFBA-B6A8A673B554}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2AD57FD9-DD31-4D7E-AFBA-B6A8A673B554}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2AD57FD9-DD31-4D7E-AFBA-B6A8A673B554}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2AD57FD9-DD31-4D7E-AFBA-B6A8A673B554}.Release|Any CPU.Build.0 = Release|Any CPU
-		{CFA43743-A7A9-4A36-9216-85050823BEC1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{CFA43743-A7A9-4A36-9216-85050823BEC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{CFA43743-A7A9-4A36-9216-85050823BEC1}.Release|Any CPU.ActiveCfg = Debug|Any CPU
-		{CFA43743-A7A9-4A36-9216-85050823BEC1}.Release|Any CPU.Build.0 = Debug|Any CPU
-		{BE327B9E-09D3-49A9-ACC5-6DA6D6463F11}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BE327B9E-09D3-49A9-ACC5-6DA6D6463F11}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BE327B9E-09D3-49A9-ACC5-6DA6D6463F11}.Release|Any CPU.ActiveCfg = Debug|Any CPU
-		{BE327B9E-09D3-49A9-ACC5-6DA6D6463F11}.Release|Any CPU.Build.0 = Debug|Any CPU
 		{58CBE919-CAD3-4924-AA95-F01EB5FA8120}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{58CBE919-CAD3-4924-AA95-F01EB5FA8120}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{58CBE919-CAD3-4924-AA95-F01EB5FA8120}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -99,24 +41,16 @@ Global
 		{C0BD6267-AA99-4DC3-880B-F561DE35A30A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C0BD6267-AA99-4DC3-880B-F561DE35A30A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C0BD6267-AA99-4DC3-880B-F561DE35A30A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{CDD2E8E8-E9FE-4179-9882-3E6D9D88C263}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{CDD2E8E8-E9FE-4179-9882-3E6D9D88C263}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{CDD2E8E8-E9FE-4179-9882-3E6D9D88C263}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{CDD2E8E8-E9FE-4179-9882-3E6D9D88C263}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{38565564-40EF-40AB-BE25-939928DF7765} = {F8826761-C591-4954-AE3F-189B91296285}
-		{2AD57FD9-DD31-4D7E-AFBA-B6A8A673B554} = {F8826761-C591-4954-AE3F-189B91296285}
-		{CFA43743-A7A9-4A36-9216-85050823BEC1} = {F8826761-C591-4954-AE3F-189B91296285}
-		{BE327B9E-09D3-49A9-ACC5-6DA6D6463F11} = {F8826761-C591-4954-AE3F-189B91296285}
 		{58CBE919-CAD3-4924-AA95-F01EB5FA8120} = {F8826761-C591-4954-AE3F-189B91296285}
 		{DBDAAECF-D9C7-424D-BE9D-FADA6F0459C9} = {F8826761-C591-4954-AE3F-189B91296285}
 		{C1402916-E3E9-47AC-B5A1-5DBDC9E47897} = {F8826761-C591-4954-AE3F-189B91296285}
 		{C0BD6267-AA99-4DC3-880B-F561DE35A30A} = {F8826761-C591-4954-AE3F-189B91296285}
-		{CDD2E8E8-E9FE-4179-9882-3E6D9D88C263} = {F8826761-C591-4954-AE3F-189B91296285}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {482AA3D6-9466-4CED-8782-1949DD26D103}

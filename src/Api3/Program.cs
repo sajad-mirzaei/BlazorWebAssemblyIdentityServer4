@@ -20,11 +20,7 @@ builder.Services.AddCors(options =>
             "https://localhost:7011", //Api1
             "https://localhost:7012", //Api2
             "https://localhost:7013", //Api3
-            "https://localhost:7021", //WebAssemblyClient1
-            "https://localhost:7022", //WebAssemblyClient2
-            "https://localhost:7023", //NetCoreJavaScriptClient
-            "https://localhost:44360",//WebFormAppJavaScriptClient
-            "https://localhost:44350" //WebForm CSharp Client
+            "https://localhost:7021" //WebAssemblyClient1
             )
         .AllowAnyMethod()
         .AllowAnyHeader());

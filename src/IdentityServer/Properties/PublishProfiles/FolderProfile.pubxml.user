@@ -4,8 +4,8 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 -->
 <Project>
   <PropertyGroup>
-    <_PublishTargetUrl>\\server-devops\IdentityServerTest\idp</_PublishTargetUrl>
-    <History>True|2023-03-28T06:10:44.3620560Z;True|2023-03-26T14:59:39.4288192+03:30;True|2023-03-26T14:59:13.3039050+03:30;True|2023-03-26T14:57:58.3461925+03:30;</History>
+    <_PublishTargetUrl>\\server-devops\IdentityServerTest\Idp</_PublishTargetUrl>
+    <History>True|2023-03-28T13:43:49.8641777Z;True|2023-03-28T12:44:37.4140088+03:30;False|2023-03-28T12:44:21.3830177+03:30;True|2023-03-28T10:37:52.0880417+03:30;False|2023-03-28T10:37:15.3482409+03:30;True|2023-03-28T10:25:04.5894475+03:30;True|2023-03-28T10:21:42.6978406+03:30;True|2023-03-28T09:40:44.3620560+03:30;True|2023-03-26T14:59:39.4288192+03:30;True|2023-03-26T14:59:13.3039050+03:30;True|2023-03-26T14:57:58.3461925+03:30;</History>
     <LastFailureDetails />
   </PropertyGroup>
 </Project>
